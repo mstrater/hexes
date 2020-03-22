@@ -26,8 +26,17 @@
 		<canvas id="canvas"></canvas>
 	</div>
 	<footer id="copyright">
-		<div>&copy; Max Strater, 2020</div>
+		<div>
+			<span>&copy; Max Strater, 2020</span>
+		</div>
 	</footer>
+	<script>
+		const firstYear = 2020;
+		let currentYear = (new Date()).getFullYear();
+		if (currentYear - firstYear > 0) {
+			document.querySelector('#copyright').innerHTML = '&copy; Max Strater, ' + firstYear + '-' + currentYear;
+		}
+	</script>
 	<script src="main.js"></script>
 </body>
 </html>
